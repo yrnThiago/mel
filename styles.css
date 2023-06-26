@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.container { 
+    font-family: 'Poppins', sans-serif;
+    background: #F8F8F8;
+    color: #4B9CD3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.aviso {
+    display: none;
+    text-align: center;
+}
+
+.pergunta__titulo {
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+.pergunta__alternativas {
+    display: inline-flex;
+    gap: 75px;
+    justify-content: center;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.pergunta__alternativas-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+    height: 50px;
+    padding: 25px;
+    background-color: #4B9CD3;
+    color: #F4E8DD;
+}
+
+.pergunta__alternativas-botao:nth-child(1):active {
+    color: #4B9CD3;
+    background: #13294B;
+    border-color: #151515;
+}
+
+.pergunta__alternativas-botao:nth-child(2) {
+    transition: top 0.3s, left 0.3s;
+}
+
+.resultado {
+    display: none;
+}
