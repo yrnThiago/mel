@@ -40,5 +40,5 @@ botaoNao.addEventListener('click', function() {
         aviso.style.display = "flex"; 
         aviso.innerHTML = "Vou falar nada, já sei oq vai acontecer..."
     }
-    else if(clickCount >= 6) aviso.innerHTML = "Contador de nãos: {{ clickCount }} {{'K' * clickCount}}"
+    else if(clickCount >= 6) aviso.innerHTML = "Contador de nãos: ${clickCount} ${'K' * clickCount}"
 });
