@@ -22,7 +22,7 @@
 }
 
 .pergunta__alternativas {
-    display: inline-flex;
+    display: flex;
     gap: 75px;
     justify-content: center;
     padding-left: 35px;
