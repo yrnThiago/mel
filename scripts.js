@@ -38,15 +38,7 @@ botaoNao.addEventListener('click', function() {
 
     if(clickCount === 5) {
         aviso.style.display = "flex"; 
-        aviso.innerHTML = "Sério mesmo que você tentou clicar 5 vezes no não?"
+        aviso.innerHTML = "Vou falar nada, já sei oq vai acontecer..."
     }
-    if(clickCount === 10) aviso.innerHTML = "Não é possível 10 VEZES???"
-    else if(clickCount === 13) aviso.innerHTML = "KKKKKKKKKKKKKKKKKKKKKKKKKKK"
-    else if(clickCount === 15) aviso.innerHTML = "Sabia q ia fazer graça, agr já deu né, clica logo no SIM"
-    else if(clickCount === 17) aviso.innerHTML = "Precisava disso? Desisto KKKKKKKKKKKKK"
-    else if(clickCount === 20) {
-        aviso.innerHTML = "Clica no não agr palhaça KKKKKKKKKK";
-        botaoNao.innerText = "SIM"
-    }
-    else if (clickCount > 20) respostaSim();
+    else if(clickCount >= 6) aviso.innerHTML = "Contador de nãos: {{ clickCount }} {{'K' * clickCount}}"
 });
