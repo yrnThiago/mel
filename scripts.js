@@ -42,3 +42,27 @@ botaoNao.addEventListener('click', function() {
     }
     else if(clickCount >= 6) aviso.innerHTML = "Contador de nãos: ${clickCount} ${'K' * clickCount}"
 });
+
+botaoNao.addEventListener('mouseover', function() {
+    clickCount += 1;
+    botaoNao.style.position = "absolute"
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    const buttonWidth = botaoNao.offsetWidth;
+    const buttonHeight = botaoNao.offsetHeight;
+  
+    const maxTop = windowHeight - buttonHeight;
+    const maxLeft = windowWidth - buttonWidth;
+  
+    const randomTop = Math.floor(Math.random() * maxTop) + 'px';
+    const randomLeft = Math.floor(Math.random() * maxLeft) + 'px';
+  
+    botaoNao.style.top = randomTop;
+    botaoNao.style.left = randomLeft;
+
+    if(clickCount === 5) {
+        aviso.style.display = "flex"; 
+        aviso.innerHTML = "Vou falar nada, já sei oq vai acontecer..."
+    }
+    else if(clickCount >= 6) aviso.innerHTML = "Contador de nãos: ${clickCount} ${'K' * clickCount}"
+});
