@@ -62,7 +62,7 @@ botaoNao.addEventListener('mouseover', function() {
 
     if(clickCount === 5) {
         aviso.style.display = "flex"; 
-        aviso.innerHTML = "Vou falar nada, já sei oq vai acontecer..."
+        aviso.innerHTML = "Vou falar nada, sua chata insuportável, só vou contar..."
     }
-    else if(clickCount >= 6) aviso.innerHTML = `Contador de nãos: ${clickCount} ${'K' * clickCount}`;
+    else if(clickCount >= 6) aviso.innerHTML = `Contador de nãos: ${clickCount}`;
 });
