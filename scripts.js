@@ -1,3 +1,4 @@
+const imagemPergunta = document.getElementById('imagem_pergunta');
 const botaoSim = document.getElementById('botao-sim');
 const botaoNao = document.getElementById('botao-nao');
 const aviso = document.getElementsByClassName("aviso")[0];
@@ -36,7 +37,7 @@ botaoNao.addEventListener('click', function() {
     botaoNao.style.top = randomTop;
     botaoNao.style.left = randomLeft;
 
-    if(clickCount === 5) {
+    if(clickCount === 1) {
         aviso.style.display = "flex"; 
         aviso.innerHTML = "Vou falar nada, já sei oq vai acontecer..."
     }
@@ -60,9 +61,15 @@ botaoNao.addEventListener('mouseover', function() {
     botaoNao.style.top = randomTop;
     botaoNao.style.left = randomLeft;
 
-    if(clickCount === 5) {
-        aviso.style.display = "flex"; 
-        aviso.innerHTML = "Vou falar nada, sua chata insuportável, só vou contar..."
+    if(clickCount === 1) {
+        aviso.style.display = "flex";
+        aviso.innerHTML = "Vou colocar várias figurinhas até você aceitar..."
     }
-    else if(clickCount >= 6) aviso.innerHTML = `Contador de nãos: ${clickCount}`;
+    else if (clickCount >= 2 && clickCount <= 16){
+        imagemPergunta.src = `./imagens/${clickCount-1}.jpg`
+    }
+    else {
+        aviso.innerHTML = "Acabou as figurinhas, agora vou te dar motivos para aceitar...\n Na verdade, você msm já pensou nesses motivos..."
+        botaoNao.style.display = "none"
+    }
 });
